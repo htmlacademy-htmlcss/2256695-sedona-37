@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [Яна Кваша](https://up.htmlacademy.ru/htmlcss/37/user/2256695).
-* Наставник: `Неизвестно`.
+* Наставник: [Виктор Рыбаков](https://htmlacademy.ru/profile/viktor-rybakov)
 
 ---
 
