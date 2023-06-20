@@ -12,12 +12,26 @@
   src: url("../fonts/ptsans-700.woff2") format("woff2");
   font-display: swap;
 }
+html {
+  height: 100%;
+}
 body {
   font-family: "PT Sans", sans-serif;
   font-size: 22px;
   line-height: 26px;
   color: #000000;
-  background-color: #ffffff;
+  background-color: #F2F2F2;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+.container {
+  margin: 0 auto;
+  width: 1200px;
+}
+.main-container {
+  flex-grow: 1;
 }
 .page-header {
   color: #000000;
@@ -34,6 +48,11 @@ body {
   clip:rect(0000);
   overflow: hidden;
 }
+.navigation {
+  display: flex;
+  width: 1060px;
+  margin: 0 auto;
+}
 .navigation-link {
   line-height: 24px;
   color:#000000;
@@ -42,10 +61,16 @@ body {
   text-decoration: none;
 }
 .navigation-list{
-  list-style-type: none;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 630px;
 }
 .navigation-user {
   list-style: none;
+  max-width: 310px;
+  margin-left: auto;
+  padding: 0;
 }
 .navigation-search {
   background-image: url("../images/search.svg");
@@ -70,6 +95,14 @@ body {
   background-color: #756157;
   color:#ffffff;
 }
+.page-container {
+  width: 1200px;
+  margin: 0 auto;
+}
+.main-logo {
+  display: block;
+  margin: 0 auto;
+}
 .hotels-link-button{
   background-color: #756157;
   color:#ffffff;
@@ -93,9 +126,34 @@ body {
   width: 1200px;
   height: 485px;
 }
-.advantages-list {
+.advantages {
+  height: 261px;
+}
+.advantages-head {
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 36px;
+  text-transform: uppercase;
   text-align: center;
-  list-style-type: none;
+}
+.advantages-reasons {
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 26px;
+  text-align: center;
+}
+.advantages-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  list-style: none;
+}
+.advantages-item {
+  width: 400px;
+  height: 385px;
 }
 .advantages-title {
   font-weight: 700;
@@ -104,35 +162,103 @@ body {
   text-align: center;
   text-transform: uppercase;
 }
+.advantages-town {
+  background-color: #82B3D3;
+}
+.advantages-square {
+  background-color: rgba(131, 179, 211, 0.12);
+}
+.advantages-road {
+  background-color: rgba(131, 179, 211, 0.2);
+}
+.advantages-tourists{
+  background-color: rgba(131, 179, 211, 0.12);
+}
+.advantages-bridge{
+  background-color: #82B3D3;
+}
 .decor-white {
   color:#ffffff;
 }
 .decor-grey {
   color:#333333;
 }
+.services-head {
+  height: 246px;
+}
+.services-title {
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 36px;
+  text-transform: uppercase;
+  text-align: center;
+}
+.services-reasons {
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 26px;
+  text-align: center;
+}
 .services-list {
+  display: flex;
+  flex-direction: row;
   list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
 }
 .services-item-hotels {
   background-image: url("../images/hotels.svg");
   background-repeat: no-repeat;
+  background-color: rgba(131, 179, 211, 0.12);
+  width: 400px;
+  height: 385px;
 }
 .services-item-meal {
   background-image: url("../images/meal.svg");
   background-repeat: no-repeat;
+  width: 400px;
+  height: 385px;
 }
 .services-item-souvenirs {
   background-image: url("../images/souvenirs.svg");
+  background-color: rgba(131, 179, 211, 0.12);
   background-repeat: no-repeat;
+  width: 400px;
+  height: 385px;
+}
+.hotels-title {
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 36px;
+  text-align: center;
+}
+.hotel-date {
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 26px;
+  text-align: center;
+}
+.hotels-link-button {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 36px;
+  width: 376px;
+  height: 52px;
 }
 .newsletter {
   background-image: url("../images/subscribe-background.jpg");
   width: 1200px;
   height: 415px;
   background-size: 100% auto;
+  text-align: center;
 }
 .page-footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   background-color: #ffffff;
+  height: 120px;
 }
 .footer-social-list {
   list-style: none;
@@ -164,12 +290,15 @@ body {
 }
 
 
+
+
+
+
 .main-inner {
   background-image: url("../images/catalog-background.jpg");
   background-repeat: no-repeat;
   background-size: 100% auto;
 }
-
 .breadcrumbs-home {
   background-image: url("../images/return-homepage.svg");
   background-repeat: no-repeat;
