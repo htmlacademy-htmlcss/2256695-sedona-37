@@ -16,25 +16,27 @@ html {
   height: 100%;
 }
 body {
+  height: 100%;
   font-family: "PT Sans", sans-serif;
   font-size: 22px;
   line-height: 26px;
   color: #000000;
   background-color: #F2F2F2;
-  margin: 0;
+  margin: 0 auto;
+}
+.wrapper {
   display: flex;
   flex-direction: column;
   min-height: 100%;
-}
-.container {
-  margin: 0 auto;
   width: 1200px;
-}
-.main-container {
-  flex-grow: 1;
+  margin: 0 auto;
 }
 .page-header {
   color: #000000;
+  background-color: #ffffff;
+}
+.main-index {
+  flex-grow: 1;
 }
 .visually-hidden{
   position: absolute;
@@ -50,25 +52,23 @@ body {
 }
 .navigation {
   display: flex;
-  width: 1060px;
-  margin: 0 auto;
+  flex-direction: row;
+  margin-left: 70px;
+  margin-right: 70px;
 }
 .navigation-link {
   line-height: 24px;
   color:#000000;
   font-weight: 700;
-  text-align: center;
   text-decoration: none;
 }
 .navigation-list{
   list-style: none;
   margin: 0;
   padding: 0;
-  width: 630px;
 }
 .navigation-user {
   list-style: none;
-  max-width: 310px;
   margin-left: auto;
   padding: 0;
 }
@@ -95,10 +95,6 @@ body {
   background-color: #756157;
   color:#ffffff;
 }
-.page-container {
-  width: 1200px;
-  margin: 0 auto;
-}
 .main-logo {
   display: block;
   margin: 0 auto;
@@ -123,11 +119,11 @@ body {
   background-image: url("../images/index-background.jpg");
   background-size: 100% auto;
   background-repeat: no-repeat;
-  width: 1200px;
-  height: 485px;
+  padding-top: 53px;
+  padding-bottom: 80px;
 }
 .advantages {
-  height: 261px;
+  background-color: #ffffff;
 }
 .advantages-head {
   font-weight: 700;
@@ -151,9 +147,9 @@ body {
   text-align: center;
   list-style: none;
 }
-.advantages-item {
-  width: 400px;
-  height: 385px;
+.advantages-item-image {
+  display: flex;
+  width: 1200px;
 }
 .advantages-title {
   font-weight: 700;
@@ -167,12 +163,18 @@ body {
 }
 .advantages-square {
   background-color: rgba(131, 179, 211, 0.12);
+  width: 400px;
+  height: 385px;
 }
 .advantages-road {
   background-color: rgba(131, 179, 211, 0.2);
+  width: 400px;
+  height: 385px;
 }
 .advantages-tourists{
   background-color: rgba(131, 179, 211, 0.12);
+  width: 400px;
+  height: 385px;
 }
 .advantages-bridge{
   background-color: #82B3D3;
@@ -184,7 +186,7 @@ body {
   color:#333333;
 }
 .services-head {
-  height: 246px;
+  background-color: #ffffff;
 }
 .services-title {
   font-weight: 700;
@@ -227,6 +229,9 @@ body {
   width: 400px;
   height: 385px;
 }
+.hotels {
+  background-color: #ffffff;
+}
 .hotels-title {
   font-weight: 700;
   font-size: 30px;
@@ -249,7 +254,6 @@ body {
 .newsletter {
   background-image: url("../images/subscribe-background.jpg");
   width: 1200px;
-  height: 415px;
   background-size: 100% auto;
   text-align: center;
 }
@@ -258,10 +262,10 @@ body {
   flex-direction: row;
   justify-content: space-between;
   background-color: #ffffff;
-  height: 120px;
 }
 .footer-social-list {
   list-style: none;
+  margin: 0;
 }
 .footer-social-vk {
   background-image: url("../images/vkontakte.svg");
@@ -292,12 +296,16 @@ body {
 
 
 
-
-
 .main-inner {
+  flex-grow: 1;
   background-image: url("../images/catalog-background.jpg");
   background-repeat: no-repeat;
   background-size: 100% auto;
+}
+.breadcrumbs {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 .breadcrumbs-home {
   background-image: url("../images/return-homepage.svg");
@@ -320,6 +328,10 @@ body {
   color: #ffffff;
   list-style: none;
 }
+.catalog-hotels {
+  display: flex;
+  flex-direction: column;
+}
 .catalog-filter-list {
   list-style: none;
 }
@@ -332,6 +344,21 @@ body {
   font-size: 30px;
   line-height: 36px;
   text-transform: uppercase;
+}
+.cards {
+  background-color: #ffffff;
+}
+.hotel-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+}
+.hotel-card {
+  width: 340px;
+  height: 438px;
 }
 .button-all {
   font-family: "PT Sans", sans-serif;
@@ -395,7 +422,21 @@ body {
   color: #333333;
   background-color: #F2F2F2;
 }
+.pagination {
+  background-color: #ffffff;
+}
+.pagination-list {
+  display: flex;
+  flex-direction: row;
+}
+.pagination-item {
+  list-style: none;
+}
 .pagination-link {
   text-decoration: none;
   color: #000000;
+}
+.newsletter-catalog {
+  background-color: #ffffff;
+  text-align: center;
 }
